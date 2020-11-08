@@ -1,2 +1,2 @@
-# Co-evolving-in-meme-and-solution-space-for-efficient-and-scalable-transfer-optimization
-This repository contains the code for the paper Co-evolving in meme and solution space for efficient and scalable transfer optimization.
+# Implementation of Transfer Optimization Algorithms
+This repository contains the implementation of CMTEA, AMTEA, and MAB-AMTEA algorithms in Python.
