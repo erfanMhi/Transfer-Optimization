@@ -1,2 +1,3 @@
-# Implementation of Transfer Optimization Algorithms
-This repository contains the implementation of CMTEA, AMTEA, and MAB-AMTEA algorithms in Python.
+# Transfer Optimization
+This repository contains the implementation of sTrEvo, AMTEA, and MAB-AMTEA algorithms in Python.
+
