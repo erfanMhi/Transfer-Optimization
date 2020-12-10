@@ -120,7 +120,16 @@ class Chromosome(Individual):
 class StrategyChromosome(Individual):
     def __init__(self, n, init_func=np.random.rand):
         super().__init__(n, init_func=init_func)
-
+    
+    def mutation(self,
+                 mute_strength,
+                 genes_min_bounds=None,
+                 genes_max_bounds=None,
+                 genes_num=None,
+                 lr=0.9):
+        
+        self.mutation_enhanced(mute_strength, genes_min_bounds, genes_max_bounds, genes_num, lr)
+        
     def mutation_enhanced(self,
                           mute_strength,
                           genes_min_bounds=None,
@@ -131,6 +140,19 @@ class StrategyChromosome(Individual):
         
         if np.sum(self.genes) == 0:
             self.genes[-1] = 1
+            
+    def fitness_calc(self,
+                     problem,
+                     src_models,
+                     target_model,
+                     sample_size,
+                     mutation_strength,
+                     samples_count,
+                     max_sampling_num=None,
+                     mutation=True,
+                     problem_type='knapsack'):
+        
+        self.fitness_calc_enhanced(problem, src_models, target_model, sample_size, mutation_strength, samples_count, max_sampling_num, mutation, problem_type)
 
     def fitness_calc_enhanced(self,
                               problem,
